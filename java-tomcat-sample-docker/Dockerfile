@@ -1,4 +1,4 @@
 FROM tomcat:8.0
-ADD **/*.war /usr/local/tomcat/webapps/
+ADD **/*.war /C/apache-tomcat/webapps
 EXPOSE 8080
 CMD ["catalina.bat", "run"]
