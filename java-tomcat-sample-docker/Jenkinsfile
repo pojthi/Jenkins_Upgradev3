@@ -18,6 +18,8 @@ pipeline {
                 bat "cd"
                 bat "dir/w"
                 bat "docker build ./java-tomcat-sample-docker -t tomcatsamplewebapp:${env.BUILD_ID}"
+				bat "docker run -p 9091:8080 tomcatsamplewebapp:${env.BUILD_ID}"
+				bat exit
             }
         }
 
